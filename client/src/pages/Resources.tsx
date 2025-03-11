@@ -1,42 +1,42 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { FileText, Video, Headphones, Globe, Book, Users, Building2, ChartBar } from "lucide-react";
+import { FileText, Video, Book, Users, Building2, ChartBar } from "lucide-react";
 
 const plannedResources = [
   {
     icon: FileText,
     title: "Multilingual Health Guides",
-    description: "Coming soon: Comprehensive guides covering essential healthcare topics in multiple languages.",
-    status: "In Development"
+    description: "Planned resource: Comprehensive guides covering essential healthcare topics in multiple languages.",
+    status: "Planning"
   },
   {
     icon: Video,
     title: "Interactive Video Series",
-    description: "Upcoming: Visual tutorials on navigating healthcare systems and understanding medical procedures.",
+    description: "Planned resource: Visual tutorials on navigating healthcare systems and medical procedures.",
     status: "Planning"
   },
   {
     icon: Book,
     title: "Healthcare Dictionary",
-    description: "Future resource: Simplified explanations of medical terms in multiple languages.",
+    description: "Planned resource: Simplified explanations of medical terms in multiple languages.",
     status: "Planning"
   },
   {
     icon: Users,
     title: "Community Forum",
     description: "Planned feature: Connect with others and share experiences in a moderated environment.",
-    status: "Upcoming"
+    status: "Planning"
   },
   {
     icon: Building2,
     title: "Provider Directory",
-    description: "In progress: Curated list of healthcare providers with language support information.",
-    status: "In Development"
+    description: "Planned resource: Curated list of healthcare providers with language support information.",
+    status: "Planning"
   },
   {
     icon: ChartBar,
     title: "Progress Tracking Tools",
-    description: "Future feature: Track your health literacy journey and set learning goals.",
+    description: "Planned feature: Track your health literacy journey and set learning goals.",
     status: "Planning"
   }
 ];
@@ -51,10 +51,10 @@ export default function Resources() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-bold mb-6">Upcoming Resources</h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
-              We are actively developing a comprehensive suite of health literacy resources. 
-              Here's what you can look forward to in our upcoming releases.
+            <h1 className="text-4xl font-bold mb-6">Planned Resources</h1>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
+              We are planning to develop a comprehensive suite of health literacy resources. 
+              Here's what we envision for our future offerings.
             </p>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function Resources() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card>
+                <Card className="h-full">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
                       <resource.icon className="h-8 w-8 text-primary" />
@@ -74,10 +74,10 @@ export default function Resources() {
                         {resource.status}
                       </span>
                     </div>
-                    <CardTitle>{resource.title}</CardTitle>
+                    <CardTitle className="text-xl">{resource.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{resource.description}</p>
+                    <p className="text-muted-foreground line-clamp-3">{resource.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
