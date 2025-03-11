@@ -351,6 +351,34 @@ section:nth-child(even) {
     margin-bottom: var(--spacing-sm);
 }
 
+/* World MUN Connection */
+.world-mun-connection {
+    background-color: #f0f8ff;
+    padding: var(--spacing-lg) 0;
+}
+
+.world-mun-connection h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.world-mun-connection p {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Application Process */
+.application-process {
+    background-color: #f0f8ff;
+    padding: var(--spacing-lg) 0;
+}
+
+.application-process h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.application-process p {
+    margin-bottom: var(--spacing-md);
+}
+
 .resource-link {
     display: inline-block;
     margin-top: var(--spacing-sm);
