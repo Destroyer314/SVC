@@ -51,7 +51,7 @@ export default function Resources() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl font-bold mb-6">Planned Resources</h1>
+            <h1 className="text-4xl font-bold mb-6 text-[#005035]">Planned Resources</h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl">
               We are planning to develop a comprehensive suite of health literacy resources. 
               Here's what we envision for our future offerings.
@@ -69,12 +69,12 @@ export default function Resources() {
                 <Card className="h-full">
                   <CardHeader>
                     <div className="flex items-center justify-between mb-2">
-                      <resource.icon className="h-8 w-8 text-primary" />
-                      <span className="text-sm font-medium text-primary/80">
+                      <resource.icon className="h-8 w-8 text-[#005035]" />
+                      <span className="text-sm font-medium text-[#005035]/80">
                         {resource.status}
                       </span>
                     </div>
-                    <CardTitle className="text-xl">{resource.title}</CardTitle>
+                    <CardTitle className="text-xl text-[#005035]">{resource.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground line-clamp-3">{resource.description}</p>

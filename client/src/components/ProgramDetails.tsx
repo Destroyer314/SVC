@@ -30,7 +30,7 @@ export function ProgramDetails() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Program Components</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#005035]">Program Components</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our comprehensive approach ensures that participants gain the knowledge and confidence 
             needed to make informed healthcare decisions.
@@ -48,8 +48,8 @@ export function ProgramDetails() {
             >
               <Card className="h-[280px] flex flex-col">
                 <CardHeader className="flex-none">
-                  <feature.icon className="h-10 w-10 text-primary mb-4" />
-                  <CardTitle>{feature.title}</CardTitle>
+                  <feature.icon className="h-10 w-10 text-[#005035] mb-4" />
+                  <CardTitle className="text-[#005035]">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow flex items-center">
                   <p className="text-muted-foreground">{feature.description}</p>
