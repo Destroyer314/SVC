@@ -4,7 +4,7 @@ import { Link } from "wouter";
 
 export function Hero() {
   return (
-    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/5 to-background pt-16">
+    <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/5 to-background pt-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
