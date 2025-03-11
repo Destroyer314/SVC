@@ -290,6 +290,67 @@ section:nth-child(even) {
     color: var(--secondary-color);
 }
 
+/* Curriculum Components */
+.curriculum-components .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.curriculum-components .resource-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-md);
+    transition: transform var(--transition-speed);
+}
+
+.curriculum-components .resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.curriculum-components .resource-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.curriculum-components .resource-card ul {
+    list-style-type: disc;
+    margin-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.curriculum-components .resource-card li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Implementation Model */
+.implementation-model {
+    background-color: #f8f9fa;
+}
+
+.implementation-model h2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.implementation-model p {
+    margin-bottom: var(--spacing-md);
+}
+
+.implementation-model .tier {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.implementation-model .tier h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
 .resource-link {
     display: inline-block;
     margin-top: var(--spacing-sm);
