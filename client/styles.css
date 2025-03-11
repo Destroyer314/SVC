@@ -66,6 +66,13 @@ nav .container {
   color: #e0e0e0;
 }
 
+.nav-links a.active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
+}
+
 /* Hero section */
 .hero {
   background-color: #f5f5f5;
