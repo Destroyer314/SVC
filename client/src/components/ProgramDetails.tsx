@@ -36,7 +36,7 @@ export function ProgramDetails() {
             needed to make informed healthcare decisions.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <motion.div
@@ -46,12 +46,12 @@ export function ProgramDetails() {
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card>
-                <CardHeader>
+              <Card className="h-[280px] flex flex-col">
+                <CardHeader className="flex-none">
                   <feature.icon className="h-10 w-10 text-primary mb-4" />
                   <CardTitle>{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow flex items-center">
                   <p className="text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
