@@ -5,8 +5,8 @@ import { Building2, Users2, Target, Shield } from "lucide-react";
 const implementationDetails = [
   {
     icon: Building2,
-    title: "Primary Partnership",
-    description: "Collaboration with Camino Health Center, a trusted bilingual clinic serving the greater Charlotte area, providing infrastructure and medical expertise."
+    title: "Inaugural Partnership",
+    description: "Proud partnership with Camino Health Center, our inaugural bilingual clinic partner serving the greater Charlotte area, providing infrastructure and medical expertise."
   },
   {
     icon: Users2,
@@ -91,6 +91,25 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mt-12"
+          >
+            <h2 className="text-2xl font-bold mb-6">Future Expansion</h2>
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground">
+                  In our 2-5 year strategic plan, we aim to expand this initiative across the UNC system, 
+                  beginning with UNC Chapel Hill's MERA program which assists Arabic-speaking refugees. 
+                  This expansion will create a network of health literacy programs across North Carolina's 
+                  universities, maximizing our impact on diverse communities.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
       </section>
     </main>
