@@ -1,4 +1,4 @@
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList, NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
 
@@ -10,56 +10,30 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <NavigationMenu className="py-4">
           <NavigationMenuList className="gap-6">
-            <NavigationMenuItem>
-              <Link href="/">
-                <NavigationMenuLink className={cn(
-                  "text-lg hover:text-primary transition-colors",
-                  location === "/" ? "font-semibold text-primary" : ""
-                )}>
-                  Home
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/about">
-                <NavigationMenuLink className={cn(
-                  "text-lg hover:text-primary transition-colors",
-                  location === "/about" ? "font-semibold text-primary" : ""
-                )}>
-                  About
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/program">
-                <NavigationMenuLink className={cn(
-                  "text-lg hover:text-primary transition-colors",
-                  location === "/program" ? "font-semibold text-primary" : ""
-                )}>
-                  Program Details
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/resources">
-                <NavigationMenuLink className={cn(
-                  "text-lg hover:text-primary transition-colors",
-                  location === "/resources" ? "font-semibold text-primary" : ""
-                )}>
-                  Resources
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/contact">
-                <NavigationMenuLink className={cn(
-                  "text-lg hover:text-primary transition-colors",
-                  location === "/contact" ? "font-semibold text-primary" : ""
-                )}>
-                  Contact
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+            {[
+              { href: "/", label: "Home" },
+              { href: "/about", label: "About" },
+              { href: "/program", label: "Program Details" },
+              { href: "/resources", label: "Resources" },
+              { href: "/contact", label: "Contact" }
+            ].map((item, index) => (
+              <NavigationMenuItem key={item.href}>
+                <Link href={item.href}>
+                  <a
+                    className={cn(
+                      "nav-link",
+                      location === item.href && "active"
+                    )}
+                    style={{
+                      animationDelay: `${index * 0.2}s`,
+                      animation: "slideIn 1s ease-in-out forwards"
+                    }}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
+              </NavigationMenuItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
