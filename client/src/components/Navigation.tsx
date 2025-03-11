@@ -21,6 +21,16 @@ export function Navigation() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
+              <Link href="/about">
+                <NavigationMenuLink className={cn(
+                  "text-lg hover:text-primary transition-colors",
+                  location === "/about" ? "font-semibold text-primary" : ""
+                )}>
+                  About
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/program">
                 <NavigationMenuLink className={cn(
                   "text-lg hover:text-primary transition-colors",
