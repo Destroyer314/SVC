@@ -1,20 +1,7 @@
-// Smooth scrolling for navigation links
+// Navigation functionality
 document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-
-      window.scrollTo({
-        top: targetSection.offsetTop - 70,
-        behavior: 'smooth'
-      });
-    });
-  });
+  // No need to add click event listeners for navigation since we're using separate HTML pages
+  // The active class is already set in each HTML file
 
   // Simple animation for cards
   const cards = document.querySelectorAll('.card');
